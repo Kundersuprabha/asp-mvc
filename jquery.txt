@@ -1,0 +1,89 @@
+<script>
+        $(document).ready(function () {
+            var now = new Date();
+            now.setFullYear(now.getFullYear() - 20);
+            $("#txt_dob").datepicker({
+                dateformat: "mm/dd/yy",
+                changeMonth: true,
+                changeYear: true,
+                yearrange: "-35Y:-20Y",
+                defaultDate: now
+            });
+                $("#btn_employee").click(function () {
+                    var name = $("#txt_employeename").val();
+                    if (name.length == 0)
+                    {
+                        $("#err_employeename").show();
+                        $("#txt_employeename").focus();
+                        return false;
+                    }
+                    else
+                    {
+                        $("#err_employeename").hide();
+                    }
+
+                    var name = $("#txt_emailid").val();
+                    if (name.length == 0) {
+                        $("#err_emailid").show();
+                        $("#txt_emailid").focus();
+                        return false;
+                    }
+                    else {
+                        $("#err_emailid").hide();
+                    }
+
+                    var r = new RegExp(/^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/)
+                    if (!r.test(email)) {
+                        $("#err_emailid").show();
+                        $("#txt_emailid").text("Invalid Format");
+                        return false;
+                    }
+                    else {
+                        $("#er_email").hide();
+
+                    }
+
+                    var name = $("#txt_mobileno").val();
+                    if (name.length == 0) {
+                        $("#err_mobileno").show();
+                        $("#txt_mobileno").focus();
+                        return false;
+                    }
+                    else {
+                        $("#err_mobileno").hide();
+                    }
+                
+                    var name = $("#ddl_dept").val();
+                    if (name.length == 0) {
+                        $("#err_dept").show();
+                        $("#ddl_dept").focus();
+                        return false;
+                    }
+                    else {
+                        $("#err_dept").hide();
+                    }
+
+                    var m = $("#rdb_male:checked").val() ? true : false;
+                    var f = $("#rdb_female:checked").val() ? true : false;
+                    if (m == false && f == false) {
+                        $("#gender").show();
+                        return false;
+                    }
+                    else {
+                        $("#gender").hide();
+
+                    }
+
+                    var name = $("#txt_dob").val();
+                    if (name.length == 0) {
+                        $("#err_dob").show();
+                        $("#txt_dob").focus();
+                        return false;
+                    }
+                    else {
+                        $("#err_dob").hide();
+                    }
+            });
+            
+        });
+    </script>

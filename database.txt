@@ -1,0 +1,600 @@
+--1. Create a Database named "Emp_DB"
+
+Create database Emp_DB
+
+use Emp_DB
+
+--2. Create a Table named "Employees" tbl_Employees
+--EmployeeID (Auto) ,EmployeeFName ,EmployeeLName ,EmployeeCity ,EmployeeDOB ,EmployeeSalary ,EmployeeStatus ,EmployeeDOJ
+create table tbl_Employees 
+(EmployeeID int identity,
+EmployeeFName varchar(100),
+EmployeeLName varchar(100),
+EmployeeCity varchar(100),
+EmployeeDOB date,
+EmployeeSalary int,
+EmployeeStatus varchar(100),
+EmployeeDOJ datetime)
+
+Select *from tbl_Employees
+
+--3. Add  columns named EmployeeDept & EmployeeDOJ in the tbl_Employees table
+alter table tbl_Employees add EmployeeDept varchar(100)
+Select *from tbl_Employees
+
+--4. Insert some records in the Employees table(min 10 rows)
+insert tbl_Employees values('Arun','Acharya','BGL','02/02/1995',10000,'working','4/22/2017','Development')
+insert tbl_Employees values('Avinash','Shetty','Chennai','3/4/1997',30000,'resigned','9/5/2018','Testing')
+insert tbl_Employees values('Avani','Rai','AP','11/4/1994',40000,'working','10/5/2015','Testing')
+insert tbl_Employees values('Bharath','chavan','Pune','8/6/1990',70000,'working','9/5/2013','HR')
+insert tbl_Employees values('bhavani','kunder','Mangalore','9/22/1993',50000,'resigned','9/5/2018','Developement')
+insert tbl_Employees values('Kavya','Alva','Chennai','3/15/1997',35000,'working','9/15/2018','HR')
+insert tbl_Employees values('Girish','Jain','BGL','8/6/1990',30000,'working','2/23/2016','Testing')
+insert tbl_Employees values('Praveen','Kotian','BGL','3/4/1985',90000,'working','3/25/2014','Development')
+insert tbl_Employees values('Ravi','Billava','Chennai','7/17/1993',75000,'resigned','9/5/2018','HR')
+insert tbl_Employees values('Suraksha','Kamath','Mumbai','8/27/1994',20000,'resigned','10/20/2017','Testing')
+Select *from tbl_Employees
+
+--5. Create a List of employees from 'Chennai' City
+Select *from tbl_Employees where EmployeeCity='Chennai'
+
+--6. Create a List of employees whose salary is between 25000 and 50000
+Select *from tbl_Employees where EmployeeSalary between 25000 and 50000
+
+--7. Create a List of employees (EmployeeFullName , EmployeeID , EmployeeCity)
+Select EmployeeFName,EmployeeID ,EmployeeCity from tbl_Employees
+
+--8. Create a List of employees in the employeesalary desc order
+Select *from tbl_Employees order by EmployeeSalary desc 
+
+--9. Create a List of employees in the employeecity asc order
+Select *from tbl_Employees order by EmployeeCity asc
+
+--10. Create a List of Employees in the ascending order based on the length of their first name
+Select *from tbl_Employees order by len(EmployeeFName) 
+
+--11. Show the employee details who is getting maximum/highest salary
+Select max(EmployeeSalary) from tbl_Employees
+Select *from tbl_Employees order by EmployeeSalary desc
+
+--12. Retrieve the sum of salary
+Select sum(EmployeeSalary) from tbl_Employees
+
+--13. Retrieve the total number of employees.
+Select Count(*) from tbl_Employees 
+
+--14. Create a List of employees who joined in Current Month
+Select *from tbl_employees where  datediff(mm,EmployeeDOJ,getdate())=0
+
+--15. Create a List of employees whose experience is more than 5 years.
+Select *from tbl_employees where DATEDIFF(yy,EmployeeDOJ,getdate()) >5
+
+--16. Create a List of employee department names with no of employees
+Select EmployeeDept ,count(*) from tbl_Employees group by EmployeeDept
+
+--17. Create a List of employee cities with count of employees
+Select EmployeeCity ,count(*) from tbl_Employees group by EmployeeCity
+
+--18. Update some employees city from Chennai to Pune
+Select *from tbl_Employees
+update tbl_Employees set EmployeeCity='Pune' where EmployeeID='2'
+
+--19. Create a List of employee department with sum of salary where sum of salary is more than 50000
+select employeedept, sum(EmployeeSalary),count(*) from tbl_employees where EmployeeSalary>50000 group by employeedept
+
+--20. Change the status of some employee from working to resigned
+update tbl_Employees set EmployeeStatus='resigned' where EmployeeStatus='Working'
+
+select *from tbl_Employees
+
+--21. Create a List of Employees who have joined in the current month.
+insert tbl_employees values('David','pinto','Chennai','2/3/1992',40000,'working',getdate(),'HR')
+Select *from tbl_employees where  datediff(mm,EmployeeDOJ,getdate())=0
+
+bank db
+--Create a Database named MyBankDB 
+create database mybankdatabase
+use mybankdatabase
+
+--1. tbl_Employees with Auto Gen EmployeeID
+   (EmployeeID , EmployeeName , EmployeeCity , 
+   EmployeeDesignation , EmployeeDOB , EmployeeDOJ , EmployeeSalary) 
+
+   create table tbl_Employees
+   (
+   EmployeeID int primary key identity(1000,1),
+   EmployeeName varchar(100) not null,
+   EmployeeCity varchar(100) not null,
+   EmployeeDesignation varchar(100) not null,
+   EmployeeDOB date not null,
+   EmployeeDOJ date not null,
+   EmployeeSalary int not null
+   )
+
+insert into tbl_Employees values('Santhosh','Bangalore','Manager','12/17/1996','07/16/2015',150000)
+insert into tbl_Employees values('Sai','Chennai','General Manager','02/12/1995','08/10/2014',100000)
+insert into tbl_Employees values('Vivek','Bangalore','Associate Manager','11/12/1997','01/10/2015',100000)
+insert into tbl_Employees values('Ramu','Bangalore','Cashier','11/12/1997','01/10/2015',80000)
+insert into tbl_Employees values('Nani','Bangalore','Cashier','05/25/1996','01/10/2018',80000)
+insert into tbl_Employees values('Vihana','Pune','Cashier','05/03/1999','03/03/2019',50000)
+
+Select *from tbl_Employees
+
+--2. tbl_Customers with Auto gen CustomerID
+--(CustomerID(PK) , CustomerName, CustomerCity, CustomerAddress , CustomerMobileNo(U), PAN (U),
+--CustomerPassword , CustomerEmailID (U) , ApprovedBy (FK-EmployeeID) )
+create table tbl_Customer
+(
+CustomerID int primary key identity(2000,1),
+CustomerName varchar(100) not null,
+CustomerCity varchar(100) not null,
+CustomerAddress varchar(100) not null,
+CustomerMobileNo varchar(100) unique not null,
+CustomerPAN varchar(100) unique not null,
+CustomerPassword varchar(100) not null,
+CustomerEmailID varchar(100) not null,
+ApprovedBy int foreign key references tbl_Employees(EmployeeID)
+)
+
+insert into tbl_Customer values('John','Bangalore','Marathahalli','9658612345','JOHN123','2658','john@g.com',1000)
+insert into tbl_Customer values('Cena','Chennai','Tnagar','8858612345','CENA123','8657','cena@g.com',1002)
+insert into tbl_Customer values('Peter','Bangalore','BTM','7858612345','PTER123','8624','petr@g.com',1000)
+insert into tbl_Customer values('Alen','Bangalore','JP Nagar','9858612345','ALEN123','8024','alen@g.com',1000)
+insert into tbl_Customer values('Rosy','Pune','pune','7358612345','ROSY123','1124','rosy@g.com',1001)
+insert into tbl_Customer values('Romen','Chennai','Tnagar','8652365987','ROME123','8520','rome@g.com',1002)
+insert into tbl_Customer values('Lucy','Chennai','Tnagar','8882365987','LUCY123','1020','lucy@g.com',1006)
+insert into tbl_Customer values('Lyon','Bangalore','Silk board','8859825987','LYON123','1010','lyon@g.com',1007)
+insert into tbl_Customer values('Kane','Tirupati','Auto nagar','7788365987','KANE123','1000','kane@g.com',1000)
+insert into tbl_Customer values('Will','Tirupati','Auto nagar','9988365987','WILL123','1000','will@g.com',1002)
+
+select *from tbl_Customer
+
+--3. tbl_AccountInfo with auto gen AccountID
+--(AccountID(PK),CustomerID(FK),AccountType,AccountBalance,AccountOpenDate, 
+--AccountStatus(Open,Closed,Blocked)) 
+Create table tbl_AccountInfo
+(
+AccountID int primary key identity(3000,1),
+CustomerID int foreign key references tbl_Customer,
+AccountType varchar(100) check(accounttype in('Savings','Current')) not null,
+AccountBalance int check(AccountBalance>0) not null,
+AccountOpenDate date not null,
+AccountStatus varchar(100) check(AccountStatus in('Open','Closed','Blocked'))
+)
+
+insert into tbl_AccountInfo values(2010,'Savings',50000,'12/28/2018','Open')
+insert into tbl_AccountInfo values(2010,'Current',10000,'02/28/2019','Open')
+insert into tbl_AccountInfo values(2015,'Savings',75000,'03/03/2019','Open')
+insert into tbl_AccountInfo values(2018,'Savings',25000,'02/28/2019','Open')
+insert into tbl_AccountInfo values(2010,'Current',25000,'02/28/2019','Open')
+insert into tbl_AccountInfo values(2019,'Savings',5000,'02/28/2015','Closed')
+insert into tbl_AccountInfo values(2010,'Savings',75000,'03/03/2019','Open')
+insert into tbl_AccountInfo values(2010,'Current',15000,'03/03/2019','Open')
+insert into tbl_AccountInfo values(2012,'Savings',10,'03/03/2016','Blocked')
+insert into tbl_AccountInfo values(2010,'Current',100,'01/03/2018','Closed')
+
+select *from tbl_AccountInfo
+
+--4. tbl_TransactionInfo with Auto gen TransactionID
+--(TransactionID (PK),AccountID (FK),TransactionType (D,C), Amount (>0),TransactionDate)
+create table tbl_TransactionInfo
+(
+TransactionID int identity(100000,1) primary key,
+AccountID int foreign key references tbl_AccountInfo(AccountID) not null,
+TransactionType varchar(100) check(TransactionType in('Debit','Credit')) not null, 
+Amount int check(Amount>0) not null,
+TransactionDate date not null
+)
+
+insert into tbl_TransactionInfo values(3000,'Debit',5000,'12/12/2018')
+insert into tbl_TransactionInfo values(3000,'Debit',10000,'01/12/2019')
+insert into tbl_TransactionInfo values(3000,'Credit',5000,'12/12/2018')
+insert into tbl_TransactionInfo values(3002,'Debit',8000,'12/12/2017')
+insert into tbl_TransactionInfo values(3000,'Debit',1000,'01/12/2016')
+insert into tbl_TransactionInfo values(3002,'Credit',2000,'12/12/2019')
+insert into tbl_TransactionInfo values(3005,'Debit',3000,'10/12/2016')
+insert into tbl_TransactionInfo values(3008,'Debit',10000,'01/07/2016')
+insert into tbl_TransactionInfo values(3004,'Credit',20000,'12/12/2018')
+insert into tbl_TransactionInfo values(3000,'Debit',10000,'01/07/2016')
+insert into tbl_TransactionInfo values(3000,'Credit',20000,'12/12/2018')
+
+Select *from tbl_TransactionInfo
+
+--1. Latest 5 transactions of an account (Enter Account ID as an Input).
+  
+  create proc p_latesttransaction(@id int)
+  as
+  begin
+  Select *from tbl_TransactionInfo where AccountID=@id order by TransactionDate
+  end
+
+declare @cid int=3000
+exec p_latesttransaction @cid
+
+select  *from tbl_AccountInfo where AccountID=@id DATEDIFF(dd,@tdate,getdate())>5
+
+
+--2. Transaction between two dates of an account (Enter Account ID as an Input)
+
+create proc p_transacton_between(@id int,@date1 date,@date2 date)
+as
+begin
+select * from tbl_TransactionInfo where AccountID=@id and TransactionDate between @date1 and @date2
+end
+
+declare @cid int=3000, @d1 date='12/12/2017',@d2 date='03/04/2019'
+exec p_transacton_between @cid,@d1,@d2
+
+--3. List of Accounts of a Customer (Enter Customer ID as an input)
+create proc p_customers_list(@id int)
+as
+begin
+select * from tbl_AccountInfo
+where CustomerID =@id
+end
+
+declare @cid int = 2010
+exec p_customers_list @cid
+
+--4. List of customers(CustomerID,CustomerName,CustomerAddress,CustomerMobileNo, AccountID , AccountBalance).
+   -- Use a Stored Procedure
+
+create proc p_cust_account_info
+as
+begin
+select c.CustomerID,c.CustomerName,c.CustomerAddress,c.CustomerMobileNo,a.AccountID ,a.AccountBalance
+from tbl_Customer c join tbl_AccountInfo a
+on c.CustomerID=a.CustomerID
+end
+
+exec p_cust_account_info
+
+
+--5. List of accounts with transactions (AccountID , AccountBalance , TransID , Amount, TransationType).
+   -- Use a Stored Procedure
+
+create proc p_accinfo_traninfo
+as
+begin
+select a.AccountID , a.AccountBalance , t.TransactionID , t.Amount, t.TransactionType
+from tbl_AccountInfo a join tbl_TransactionInfo t
+on a.AccountID=t.AccountID
+end
+
+exec p_accinfo_traninfo
+
+--6. List of customers with accounts and transations (CustomerID,CustomerName,CustomerAddress,CustomerMobileNo, AccountID ,
+-- AccountBalance,TransationID , Amount, TransationType)
+-- Use a Stored Procedure
+
+create proc p_cust_acc_tran_info
+as
+begin
+select c.CustomerID,c.CustomerName,c.CustomerAddress,c.CustomerMobileNo, a.AccountID ,a.AccountBalance,
+t.TransactionID , t.Amount, t.TransactionType
+from tbl_Customer c join tbl_AccountInfo a
+on c.CustomerID=a.CustomerID
+join tbl_TransactionInfo t
+on a.AccountID=t.AccountID
+end
+
+exec p_cust_acc_tran_info
+
+
+--7. List of Customers who have accounts
+   -- Use a Stored Procedure
+
+create proc p_customers_who_account
+as
+begin
+select * from tbl_Customer
+where CustomerID in(select CustomerID from tbl_AccountInfo)
+end
+
+exec p_customers_who_account
+
+
+--8. List of Customer who have no account.
+   -- Use a Stored Procedure
+
+create proc p_customers_not_account
+as
+begin
+select * from tbl_Customer
+where CustomerID not in(select CustomerID from tbl_AccountInfo)
+end
+
+exec p_customers_not_account
+
+
+--9. List of Account which has transaction.
+   -- Use a Stored Procedure
+create proc p_has_trans_acc
+as
+begin
+select * from tbl_AccountInfo 
+where AccountID in(select AccountID from tbl_TransactionInfo)
+end
+
+exec p_has_trans_acc
+
+
+--10. List of Account which has no transaction
+   -- Use a Stored Procedure
+
+create proc p_no_trans_acc
+as
+begin
+select * from tbl_AccountInfo 
+where AccountID not in(select AccountID from tbl_TransactionInfo)
+end
+
+exec p_no_trans_acc
+
+
+--11. Create two views named v_account_saving and v_account_current
+--savings
+
+create view v_account_saving
+as
+select * from tbl_AccountInfo where AccountType='Savings'
+
+select * from v_account_saving
+
+--current
+create view v_account_current
+as
+select * from tbl_AccountInfo where AccountType='Current'
+
+select * from v_account_current
+
+
+--12. Create a procedure for getting accountbalance using output parameter  by passing accountid as input parameter.
+create proc p_get_acc_bal(@id int,@bal int output)
+as
+begin
+select @bal=AccountBalance from tbl_AccountInfo where AccountID=@id
+end
+
+declare @cid int=3000,@abal int
+exec p_get_acc_bal @cid,@abal output
+select @abal
+
+
+
+--13. Create a trigger for updating the account balance as per the type transaction.
+
+create trigger trg_upadte_bal
+on tbl_TransactionInfo
+for insert
+as
+begin
+declare @id int,@balance int,@type varchar(100)
+select @id=AccountID,@balance=Amount,@type=TransactionType from inserted
+if(@type='Credit')
+begin
+update tbl_AccountInfo set AccountBalance=AccountBalance+@balance where AccountID=@id
+end
+if(@type='Debit')
+begin
+update tbl_AccountInfo set AccountBalance=AccountBalance-@balance where AccountID=@id
+end
+end
+
+
+select * from tbl_AccountInfo
+select * from tbl_TransactionInfo
+
+insert into tbl_TransactionInfo values(10000,'Debit',10000,'03/04/2019')
+insert into tbl_TransactionInfo values(10000,'Credit',10000,'03/04/2019')
+
+--14. Find the employee details who is getting maximum salary.
+select top 1 with ties * from tbl_Employees
+order by EmployeeSalary desc
+
+--15. Find the employee details who is getting second maximum salary.
+select top 1 with ties * from tbl_Employees
+where EmployeeID in(select top 2 EmployeeID from tbl_Employees order by EmployeeSalary desc)
+order by EmployeeSalary asc
+
+--16. Find the account details which has maximum balanace.
+select top 1 with ties * from tbl_AccountInfo
+order by AccountBalance desc
+
+--17. Find the account details which has second maximum balance.
+select top 1 * from tbl_AccountInfo
+where AccountID in(select top 2 AccountID from tbl_AccountInfo order by AccountBalance desc)
+order by AccountBalance asc
+
+select * from tbl_AccountInfo
+
+--18. Create a List of (EmployeeID , EmployeeName , CustomerID , CustomerName , AccountID , AccountBalance)- Use Join
+select e.EmployeeID , e.EmployeeName , c.CustomerID , c.CustomerName , a.AccountID , a.AccountBalance
+from tbl_Employees e join tbl_Customer c
+on e.EmployeeID=c.ApprovedBy 
+join tbl_AccountInfo a
+on c.CustomerID=a.CustomerID
+
+--19. Create a List of (EmployeeDept , NoOfEmployees)
+select EmployeeDesignation,count(*)
+from tbl_Employees
+group by EmployeeDesignation
+
+--20. Create a List of (AccountNo , NoOfTransations)
+select AccountID,count(*)
+from tbl_TransactionInfo
+group by AccountID
+
+online food
+--OnlineFoodOrderingDB
+create database FoodOrderingDB
+use FoodOrderingDB
+ --1. Create a Table called Restaurants
+--RestaurantID(PK,Auto), RestaurantName , RestaurantAddress , RestaurantCity , ContactNo
+Create table tbl_Restaurants
+(
+RestaurantID int identity(1,1) primary key not null,
+RestaurantName varchar(100) not null,
+RestaurantAddress varchar(100) not null,
+RestaurantCity varchar(100) not null,
+ContactNo varchar(100) not null
+)
+select *from tbl_Restaurants
+
+insert tbl_Restaurants values('Maiyas resturants','Jayanagar','BGL',9967511111)
+insert tbl_Restaurants values('sea food','Mgroad','chennai',9967511112)
+insert tbl_Restaurants values('Nandini delux','indiranagar','Pune',9967511113)
+insert tbl_Restaurants values('Mantap','yashwanthpur','BGL',9967511114)
+insert tbl_Restaurants values('deepa comforts','adyar','Mangalore',9867511111)
+insert tbl_Restaurants values('ideals','avaniroad','mumbai',7967511115)
+insert tbl_Restaurants values('cheerys square','magadi','BGL',9867511116)
+insert tbl_Restaurants values('kobe sizzlers','kgf','chennai',9567511117)
+insert tbl_Restaurants values('village resturants','kodiyalbail','Mangalore',8967511118)
+insert tbl_Restaurants values('janatha delux','JPnagar','BGL',9867511119)
+
+--2. Create a Table called RMenuItems
+--MenuID (PK , Auto) ,RestID (FK), MenuName , MenuType , MenuCategory , MenuPrice , MenuDesc
+create table tbl_RMenuItems
+(
+MenuID int identity(100,1) primary key not null,
+RestaurantID int foreign key references tbl_Restaurants not null,
+MenuName varchar(100) not null,
+MenuCategory varchar(100) not null,
+MenuPrice int not null,
+Menudisc varchar(100) not null
+)
+
+
+Select *from tbl_RMenuItems
+
+insert tbl_RMenuItems values(1,'veg','Staters',200,'PaneerChilly')
+insert tbl_RMenuItems values(3,'nonveg','main',450,'ChillychickenBiriyani')
+insert tbl_RMenuItems values(1,'veg','Staters',250,'babycornmachurian')
+insert tbl_RMenuItems values(4,'veg','main',350,'PaneerBiriyani')
+insert tbl_RMenuItems values(7,'nonveg','Staters',400,'fishfry')
+insert tbl_RMenuItems values(8,'nonveg','main',500,'Malaitikkabiriyani')
+insert tbl_RMenuItems values(2,'veg','Staters',270,'Paneer65')
+insert tbl_RMenuItems values(1,'veg','Staters',220,'mashroomchilly')
+insert tbl_RMenuItems values(5,'veg','main',250,'friedrice')
+insert tbl_RMenuItems values(2,'nonveg','Staters',300,'chickentikka')
+
+--3. Create a Table called Customers
+--CustomerID (PK, Email) , CustomerName , CustomerCity , CustomerDOB , CustomerGender , CustomerPassword
+create table tbl_customers
+(CustomerID varchar(100) primary key, 
+CustomerName varchar(100) not null, 
+CustomerCity varchar(100) not null, 
+CustomerDOB date not null, 
+CustomerGender varchar(100) not null, 
+CustomerPassword varchar(100) not null 
+)
+select *from tbl_customers
+insert into tbl_customers values('john@g.com','john','Bangalore','12/17/1996','male','pass@123')
+insert into tbl_customers values('kum@g.com','Kumar','Bangalore','10/11/1995','male','pass@124')
+insert into tbl_customers values('rosy@g.com','rosy','Bangalore','3/12/1995','female','pass@233')
+insert into tbl_customers values('vishal@g.com','vishal','Chennai','06/12/1996','male','pass@433')
+insert into tbl_customers values('avani@g.com','avani','Bangalore','06/05/2000','female','pass@533')
+insert into tbl_customers values('sup@g.com','Suprabha','Chennai','12/12/1995','female','pass@244')
+insert into tbl_customers values('sai@g.com','Sai','Hyderabad','09/09/1995','male','pass@833')
+insert into tbl_customers values('siv@g.com','Siva','Bangalore','04/11/1995','male','pass@293')
+
+--4. Create a table called Orders
+create table tbl_orders(
+OrderID int identity(10000,1) primary key, 
+CustomerID varchar(100) foreign key references tbl_customers(CustomerID), 
+OrderDate date not null, 
+DeliveryAddress varchar(100) not null, 
+OrderStatus varchar(100) check(OrderStatus in('ordered','not ordered')) not null
+)
+
+insert into tbl_orders values('sup@g.com','02/12/2019','Bangalore','ordered')
+insert into tbl_orders values('sup@g.com','02/12/2019','Bangalore','ordered')
+insert into tbl_orders values('kum@g.com','02/18/2019','Bangalore','ordered')
+insert into tbl_orders values('kum@g.com','02/22/2019','Bangalore','not ordered')
+insert into tbl_orders values('vishal@g.com','02/22/2019','Bangalore','ordered')
+insert into tbl_orders values('vishal@g.com','02/24/2019','Bangalore','ordered')
+insert into tbl_orders values('sup@g.com','02/25/2019','Bangalore','ordered')
+insert into tbl_orders values('sup@g.com','02/25/2019','Bangalore','not ordered')
+insert into tbl_orders values('sai@g.com','02/26/2019','Chennai','ordered')
+insert into tbl_orders values('sup@g.com','02/26/2019','Hyderabad','not ordered')
+insert into tbl_orders values('siv@g.com','02/28/2019','Chennai','ordered')
+insert into tbl_orders values('sup@g.com','02/28/2019','Bangalore','ordered')
+insert into tbl_orders values('vishal@g.com','03/02/2019','Bangalore','ordered')
+select *from tbl_orders
+
+--5. Create a table called OrderMenus
+--OrderID (FK) , MenuID(FK) , MenuQty , MenuPrice 
+--	Note : OrderID & MenuID should be together primary key.
+create table tbl_ordermenus(
+OrderID int foreign key references tbl_orders(OrderID) not null, 
+MenuID int foreign key references tbl_RMenuItems(MenuID) not null, 
+MenuQty int check(MenuQty>0) not null, 
+MenuPrice int check(MenuPrice>0) not null,
+primary key(OrderID,MenuID)
+)
+select *from tbl_ordermenus
+
+insert into tbl_ordermenus values(10000,101,2,500)
+insert into tbl_ordermenus values(10000,102,3,500)
+insert into tbl_ordermenus values(10001,101,2,500)
+insert into tbl_ordermenus values(10001,104,5,1500)
+insert into tbl_ordermenus values(10005,103,2,500)
+insert into tbl_ordermenus values(10007,105,1,150)
+insert into tbl_ordermenus values(10002,101,2,500)
+insert into tbl_ordermenus values(10003,105,4,500)
+
+
+--1. Show the list of Restaurant of specific city
+select * from tbl_Restaurants
+where RestaurantCity='BGL'
+
+--2. Show the list of all Restaurants along with menus (RestaurantID , RestaurantName ,MenuID , MenuName , MenuPrice)
+select r.RestaurantID,r.RestaurantName,m.MenuID,m.MenuName,m.MenuPrice
+from tbl_restaurants r left join tbl_RMenuItems m
+on r.RestaurantID=m.RestaurantID
+
+--3. Show the list of  Restaurants along with menus (RestaurantID , RestaurantName ,
+--MenuID , MenuName , MenuPrice) of specific city
+select r.RestaurantID,r.RestaurantName,m.MenuID,m.MenuName,MenuPrice
+from tbl_restaurants r join tbl_RMenuItems m
+on r.RestaurantID=m.RestaurantID
+
+--4. Show the list of Orders of a specific customer (based on customerid)
+select * from tbl_orders
+where tbl_orders.CustomerID='sup@g.com'
+
+--5. Show the list of orders along with ordermenus (OrderID , CustomerID , OrderDate , MenuID , MenuQty , MenuPrice)
+select o.OrderID,o.CustomerID,o.OrderDate,m.MenuID,m.MenuQty,m.MenuPrice
+from tbl_orders o join tbl_ordermenus m
+on o.OrderID=m.OrderID
+
+--6. Show the list of latest 5 orders of a specific customer (based on CustomerID)
+select top 5 *
+from tbl_orders
+where CustomerID='sup@g.com'
+order by OrderDate desc
+
+--7. Show the list of menus in price ascending order.
+select * from tbl_RMenuItems
+order by tbl_RMenuItems.MenuPrice asc
+
+--8. Show the list of cities along with number of restaurants
+select RestaurantCity,count(*)
+from tbl_restaurants
+group by RestaurantCity
+
+--9. Show the list of customers who never placed any order.
+select * from tbl_customers
+where CustomerID not in(select CustomerID from tbl_orders)
+
+--10. Show the menuitem details which has highest menuprice.(First)
+select * from tbl_RMenuItems
+where MenuPrice in(select max(MenuPrice) from tbl_RMenuItems)
+--or
+select top 1 with ties * from tbl_RMenuItems
+order by MenuPrice desc 
+
+--11. Show the menuitem details which has second highest menuprice.(Second)
+select top 1 with ties * from tbl_RMenuItems
+where MenuPrice in(select top 2 MenuPrice from tbl_RMenuItems order by MenuPrice desc)
+order by MenuPrice asc

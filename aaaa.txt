@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8" />
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/jquery-ui.css" rel="stylesheet" />
+    <script src="js/bootstrap.js"></script>
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <link href="StyleSheet.css" rel="stylesheet" />
+
+   
+</head>
+<body>
+    <div class="container-fluid"> zeplin@8413
+
+        <div class="customdiv">kulranjan@iosyas.in
+              <div>
+      
+                      <img src="Images/zeplin2.svg" class="logo-negative" />
+
+                  <br />
+                  <br />
+                  <br />
+                  <p  class="customdiv1">
+                      Any language<br />
+                      Any subject<br />
+                      Any location
+                  </p>
+              </div>
+                <div class="customdiv2">
+                    <p> Online testing software <br />
+                    that makes it easy to vet <br />
+                    translators and interpreters</p> 
+                </div>
+                <div class="customdiv3">
+                   <button class="customdiv4">Find Out How it Works </button>
+                       
+                </div>
+
+            </div>
+     
+        <div class="customdivA">
+            <br />
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <img src="Images/mission.svg" style="width:50px;height:50px;" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <img src="Images/martt.svg" style="width:50px;height:50px;" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <img src="Images/unitedstatearmy.png" style="width:50px;height:50px;" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <img src="Images/internationalschool.png" style="width:50px;height:50px;" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <img src="Images/merdian.png" style="width:50px;height:50px;" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <img src="Images/LTC.svg" style="width:50px;height:50px;" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <img src="Images/allin.png" style="width:50px;height:50px;" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <img src="Images/atlas.png"  style="width:50px;height:50px;"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <img src="Images/global.png"  style="width:50px;height:50px;" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <img src="Images/cwu.png" style="width:50px;height:50px;" />    
+           <br />
+ 
+
+        </div>
+
+        <div class="customDivB">
+            <img src="Images/group1.svg" class="group" />
+        </div>
+
+        <div class="customDivC">
+            <p class="cont">
+                A fully-featured online testing software that will streamline your <br />
+                process from test generation and candidate scheduling, through <br />
+                proctoring online exams and detecting cheating, and all the way <br />
+                to scoring and finding the perfect candidate fit for your needs.<br /><br />
+            </p>
+            <div class="cont2">
+                <div class="row">
+                    <div class="col-md-2">
+
+                    </div>
+                    <div class="col-md-8">
+                        <div class="row">
+                            <img src="Images/rect.svg" />
+                            <br />
+                            <p>
+                                Generate a Test or Use<br />
+                                a Pre-Built Template
+                            </p>
+
+                            <img src="Images/hex.svg" />
+                            <br />
+                            <p>
+                                Schedule your Candidates
+                            </p>
+                            <img src="Images/hex1.svg" />
+                            <br />
+                            <p>
+                                Proctor Remotely
+                            </p>
+                            <img src="Images/circle.svg" />
+                            <br />
+                            <p>
+                                Detect Cheating
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+
+                    </div>
+                </div>
+                <div class="row">
+                    <br />
+                    <br />
+                    <br />
+
+                    <div class="col-md-">
+
+                    </div>
+                    <div class="col-md-6">
+
+
+                        <div class="row">
+                            <img src="Images/triangle1.svg" />
+                            <br />
+                            <p>
+                                Automate Grading
+                            </p>
+                            <img src="Images/triangle2.svg" />
+                            <br />
+                            <p>
+                                Score Subjectively
+                            </p>
+                            <img src="Images/hex2.svg" />
+                            <br />
+                            <p>
+                                Find the Best Translators<br />
+                                and Interpreters
+                            </p>
+                        </div>
+
+                    </div>
+                    <div class="col-md-3">
+
+                    </div>
+                </div>
+
+            </div>
+            
+        </div>
+
+        <div class="customDivD">
+            <img src="Images/group2.svg" class="group2" />
+
+       </div>
+
+        <div class="CustomDivE">
+            <div class="row" style="background-color: #087bff;">
+                <div class="col-md-3">
+
+                </div>
+                <div class="col-md-6">
+                <p class="cont3">
+                    So much more than online <br />
+                    assessment software
+                </p>
+                <br />
+                <br />
+
+                <p style="text-align:center;">
+                    I never imagined it was possible, but by using Rosalyn.ai,<br />
+                    our testing costs have been reduced drastically and our<br />
+                    hiring decisions have improved dramatically.
+                </p>
+                    <br/>
+                    <br />
+                    <br />
+                    <p style="text-align:left;padding-left:600px;">
+                        -Mark J.<br />
+                        Translations Company<br />
+                        New York, NY
+
+                    </p>
+                </div>
+                <div class="col-md-3">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="customDivF">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="cont4">
+                        <br />
+                        <br />
+                        <br />
+                        <img src="Images/group4.svg" />
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="cont5">
+                        <br />
+                        <br />
+                        <br />
+
+                        <p>
+                            A Scientific Approach to Online Assessments<br />
+                            for translation and interpreting needs
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+
+                </div>
+
+                
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+
+                </div>
+                <div class="col-md-8">
+
+                </div>
+                <div class="col-md-2">
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+
+                </div>
+                <div class="col-md-8">
+                    <div class="row">
+                        <p>
+                            Use less administration resources on <br />
+                            scheduling, sending, and grading tests<br />
+                            <br />
+
+                            Waste less executive resources on test <br />
+                            generation and interviewing <br />
+                            the wrong candidates
+                        </p>
+                        <p>
+                            Reduce the costs of remote testing or <br />
+                            flying candidates around the world
+                            <br />
+                            <br />
+                            Eliminate the expense of hiring mistakes<br />
+                            and training a mismatched <br />
+                            talent pool
+                        </p>
+                        <p>
+                            Cheaters will be discovered before<br />
+                            they waste your resources
+                            <br />
+                            <br />
+                            Candidates’ strengths will be<br />
+                            uncovered so you can assign them <br />
+                            projects they will excel at
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-2">
+
+                </div>
+            </div>
+        </div>
+        <div class="customDivG">
+            <div class="row">
+                <div class="col-md-2">
+                    <div>
+                        <p>
+                            Watch a<br />
+                            90-second<br />
+                            explanation<br />
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <img src="Images/group6.png" class="" />
+
+                </div>
+                <div class="col-md-2">
+                    <p>
+                        The only online <br />
+                        testing software <br />
+                        created for language<br />
+                         services companies.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+body, html {
+  height: 100%;
+  margin: 0;
+}
+.customdiv {
+    background-image: url('Images/zeplin1.png'); 
+    width: 1500px;
+    height:600px;
+    object-fit: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.customdiv1{
+    padding-left:250PX;
+  font-family: CircularStd;
+  font-size: 30px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ffffff;
+}
+.customdiv2{
+  padding-left:250PX;
+  font-family: CircularStd;
+  font-size: 20px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.38;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ffffff;
+}
+.customdiv3{
+    padding-left:250px;
+}
+.customdiv4{
+    border-radius:100px;
+      border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  background-color: #087bff;
+}
+
+.logo-negative {
+  width: 130px;
+  height: 41px;
+  object-fit: contain;
+  padding-left:20px;
+
+}
+.customDivA{
+  width: 1500px;
+  height: 134px;
+
+}
+.customDivB{
+  width: 1500px;
+ 
+
+}
+.group{
+    width:1500px;
+      height: 149px;
+  object-fit: contain;
+}
+.customDivC{
+    width:1500px;
+    height:400px;
+    object-fit:contain;
+}
+.cont{
+
+  font-family: CircularStd;
+  font-size: 20px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1;
+  text-align:justify;
+  letter-spacing: normal;
+  text-align: center;
+  color: #1d1d1d;
+}
+.cont1{
+     
+  
+}
+.group{
+    width:1500px;
+  height: 149px;
+  object-fit: contain;
+  transform: rotate(-180deg);
+}
+.customDivD{
+      width: 1500px;
+
+}
+.customDivE{
+      width: 1500px;
+  height: 443px;
+  background-color: blue;
+}
+.cont3{
+    
+  font-family: CircularStd;
+  font-size: 50px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1;
+  text-align:justify;
+  letter-spacing: normal;
+  text-align: center;
+  color: black;
+
+}
+.customDivF {
+    background-image: url('Images/group3.svg');
+    width:1500px;
+    height:600px;
+}
+.cont4{
+      width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+.cont5{
+  font-family: CircularStd;
+  font-size: 30px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.12;
+  letter-spacing: normal;
+  text-align: center;
+  color: #1d1d1d;
+}
+.customDivG {
+    background-image: url('Images/group5.svg');
+    width:1500px;
+    height:600px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+cdn
+container
+fixed container 
+container-fluid It wil show everthing 100%
+small 
+medium 
+large
+parent class id 
